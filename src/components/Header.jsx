@@ -46,16 +46,16 @@ function Header({ onContactClick }) { // Ensure `onContactClick` is received as 
         <a href="#contact" onClick={onContactClick}>Contact Me</a>
           <a href="#about" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>About Me</a>
           <div className="menu-socials">
-                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="github-icon" onClick={() => setIsMenuOpen(false)}>
+                <a href="https://github.com/dlaurora" target="_blank" rel="noopener noreferrer" className="github-icon" onClick={() => setIsMenuOpen(false)}>
                     <i className="fab fa-github"></i>
                 </a>
-                <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="instagram-icon" onClick={() => setIsMenuOpen(false)}>
+                <a href="https://instagram.com/dlaurora" target="_blank" rel="noopener noreferrer" className="instagram-icon" onClick={() => setIsMenuOpen(false)}>
                     <i className="fab fa-instagram"></i>
                 </a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="linkedin-icon" onClick={() => setIsMenuOpen(false)}>
+                <a href="https://linkedin.com/in/diego-laurora-97372695" target="_blank" rel="noopener noreferrer" className="linkedin-icon" onClick={() => setIsMenuOpen(false)}>
                     <i className="fab fa-linkedin"></i>
                 </a>
-                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="twitter-icon" onClick={() => setIsMenuOpen(false)}>
+                <a href="https://twitter.com/diegolaurora" target="_blank" rel="noopener noreferrer" className="twitter-icon" onClick={() => setIsMenuOpen(false)}>
                     <i className="fab fa-twitter"></i>
                 </a>
             </div>
