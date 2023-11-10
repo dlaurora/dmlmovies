@@ -20,7 +20,7 @@ function Container () {
         try {
 
             // https://api.themoviedb.org/3/movie/popular
-            const url = `${import.meta.env.VITE_URL}?language=es-ES&page=${page}` // template string 
+            const url = `${import.meta.env.VITE_URL}?language=en-US&page=${page}` // template string 
 
             const config = {
                 method: "GET", // GET POR DEFECTO  METHODS = GET,POST,PUT,DELETE,PATCH,OPTIONS
@@ -36,7 +36,7 @@ function Container () {
                 if (movies.length === 0) {
                     setMovies(res.results)
                 } else {
-                    setMovies([movies, ...res.results])
+                    setMovies([...movies, ...res.results]);
                 }
 
             }
@@ -69,7 +69,7 @@ function Container () {
                     })
                 }
 
-            </main>
+            </main>a
             <button className='btn-seemore' onClick={handleClick}>Ver más</button>
 
             {loader && <p>Cargando...</p>}

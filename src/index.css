@@ -25,6 +25,7 @@ img {
 }
 
 h1 {
+  margin-top: 120px;
   font-size: 5rem; /* 50px */
   font-weight: 900;
   text-align: center;
@@ -44,7 +45,7 @@ h1 {
 }
 
 .moviecard {
-  padding: 0.5rem;
+  padding: 0.7rem;
   border-radius: 0.75rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -66,17 +67,195 @@ h1 {
 .btn-seemore {
   border: none;
   display: block;
-  font-size: 2rem;
+  font-size: 4rem;
   background-color: inherit;
-  margin: 5rem auto;
+  margin: 1rem auto;
   width: fit-content;
   color: gray;
   cursor: pointer;
+  padding-bottom: 20rem;
 }
+
 .btn-seemore:hover {
   color: #000;
   transition: color 0.2s linear;
 }
+
+/* Header styles */
+header {
+  position: fixed; /* Fixed position to keep it at the top */
+  top: 0;
+  width: 100%;
+  background-color: #333; /* Adjust color as needed */
+  z-index: 1001; /* Above other content */
+  padding: 1.5rem;
+}
+.navbar {
+  display: flex;
+  justify-content: flex-end; /* Aligns the menu to the right */
+  padding: 1rem;
+}
+
+/* Hamburger Icon */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Menu button */
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem; /* Larger padding to increase clickable area */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease;
+  pointer-events: none; 
+}
+
+/* Footer styles */
+footer {
+  position: fixed; /* Fixed position to keep it at the bottom */
+  bottom: 0;
+  width: 100%;
+  background-color: #333; /* Adjust color as needed */
+  z-index: 1001; /* Above other content */
+  padding: 7rem 1rem;
+  color: #ddd;
+  font-size: 1.5rem;
+}
+
+/* Scroll-to-Top Button styles */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20rem;
+  right: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  background-color: #333; /* Example background color */
+  color: white; /* Example text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0.7; /* Semi-transparent */
+  transition: opacity 0.2s;
+}
+
+.scroll-to-top:hover {
+  opacity: 1; /* Fully opaque on hover */
+}
+
+/* Ensure the main content is not hidden behind the header or footer */
+.content {
+  padding-top: 70px; /* Height of the header */
+  padding-bottom: 70px; /* Height of the footer */
+  min-height: 100vh; /* Minimum height takes into account header and footer */
+}
+
+/* Menu Button */
+.menu-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+/* Dropdown Menu */
+/* Dropdown Menu */
+.menu-dropdown {
+  display: none; /* Hidden by default */
+  position: absolute;
+  margin-top: 6.5rem;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 200px; /* Adjusted width */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  /* Additional properties for animation and positioning */
+  transform-origin: top right;
+}
+
+.menu-dropdown.show {
+  display: block; /* Show the dropdown */
+  animation: fadeIn 0.5s;
+}
+
+/* Dropdown Links */
+.menu-dropdown a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 1.5rem;
+}
+
+.menu-dropdown a:hover {
+  background-color: #ddd;
+}
+
+/* Social Icons in Dropdown */
+.menu-socials {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.menu-socials a {
+  color: black;
+  font-size: 2.5rem;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+  background-color: none;
+  outline: none;
+}
+
+.menu-socials a:hover,
+.menu-socials a:focus {
+  color: #666; /* This will be overridden by the specific styles below */
+  background-color: transparent; /* Maintain a transparent background on hover and focus */
+  outline: none; /* Remove the focus outline */
+}
+
+/* Specific hover colors for each social media icon */
+.menu-socials a.github-icon:hover {
+  color: #5e3fba; /* GitHub hover color, for example */
+}
+
+.menu-socials a.instagram-icon:hover {
+  color: #C13584; /* Instagram hover color */
+}
+
+.menu-socials a.linkedin-icon:hover {
+  color: #0077B5; /* LinkedIn hover color */
+}
+
+.menu-socials a.twitter-icon:hover {
+  color: #1DA1F2; /* Twitter hover color */
+}
+
+/* FadeIn Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @media (min-width: 768px) {
   .content {
     display: grid;
@@ -88,4 +267,71 @@ h1 {
   .content {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+
+/*###### FORM STYLES ####### */
+
+/* Entire background excluding the popup form should be blurred */
+.blur *:not(.popup, .popup *) {
+  filter: blur(5px);
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1002; /* Above the header */
+}
+
+/* Popup Form Container */
+.popup {
+  position: fixed;
+  top: 10vh; /* Adjusted so it's always visible from the top */
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 20px;
+  z-index: 1003; /* Above the overlay, ensuring it's not blurred */
+  width: 90%; /* Adjust width as needed */
+  max-width: 500px; /* Set a max-width for larger screens */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: adds a slight shadow for better visibility */
+  border-radius: 8px; /* Optional: rounds the corners */
+}
+
+/* Ensure the popup is scrollable if content is larger than the screen */
+.popup-content {
+  overflow-y: auto;
+  max-height: 80vh; /* Adjust as needed */
+}
+
+/* Form field styling */
+.contact-form input,
+.contact-form textarea {
+  /* Add your input and textarea styling here */
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.contact-form textarea {
+  /* Add your textarea specific styling here */
+  height: 150px; /* Adjust based on your needs */
+  resize: vertical; /* Allows vertical resizing */
+}
+
+/* Send and close button styling */
+.send-button,
+.close-button {
+  cursor: pointer;
+  /* Add other button styling here */
+}
+
+.send-button:hover,
+.close-button:hover {
+  /* Hover effect for buttons */
+  opacity: 0.8;
 }
