@@ -44,7 +44,7 @@ function Header({ onContactClick }) { // Ensure `onContactClick` is received as 
         {/* Dropdown menu */}
         <div className={`menu-dropdown ${isMenuOpen ? 'show' : ''}`}>
         <a href="#contact" onClick={onContactClick}>Contact Me</a>
-          <a href="#about" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>About Me</a>
+          <a href="https://dlaurora.github.io/Portfolio" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>About Me</a>
           <div className="menu-socials">
                 <a href="https://github.com/dlaurora" target="_blank" rel="noopener noreferrer" className="github-icon" onClick={() => setIsMenuOpen(false)}>
                     <i className="fab fa-github"></i>
