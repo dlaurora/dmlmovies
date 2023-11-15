@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Container from "./components/Container"
-import { MagicMotion } from 'react-magic-motion'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTopButton from './components/ScrollToTopButton';
