@@ -37,6 +37,13 @@ h1 {
   width: min(95%, 120rem); /* Significa lo mismo que las 2 lineas previas */
   margin: 0 auto;
 }
+
+.loader {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -45,9 +52,37 @@ h1 {
 }
 
 .moviecard {
-  padding: 0.7rem;
+  padding: 0.5rem;
   border-radius: 0.75rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.moviecard-description {
+  display: block;
+  padding: 2rem;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  z-index: 10;
+  bottom: -100%;
+  left: 0;
+  opacity: 0;
+  transition: all 0.1s linear;
+}
+.moviecard-vote {
+  font-size: 2rem;
 }
 
 .moviecard h3 {
@@ -64,16 +99,21 @@ h1 {
   transform: scale(1.05);
 }
 
+.moviecard:hover .moviecard-description {
+  bottom: 0;
+  opacity: 1;
+}
+
 .btn-seemore {
   border: none;
   display: block;
-  font-size: 4rem;
+  font-size: 2rem;
   background-color: inherit;
-  margin: 1rem auto;
+  margin: 5rem auto;
   width: fit-content;
   color: gray;
   cursor: pointer;
-  padding-bottom: 20rem;
+  /*padding-bottom: 20rem;*/
 }
 
 .btn-seemore:hover {
