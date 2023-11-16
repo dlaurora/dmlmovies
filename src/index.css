@@ -183,12 +183,12 @@ footer {
 /* Scroll-to-Top Button styles */
 .scroll-to-top {
   position: fixed;
-  bottom: 20rem;
+  bottom: 5rem;
   right: 2rem;
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
-  background-color: #333; /* Example background color */
-  color: white; /* Example text color */
+  background-color: #3e3e3e; /* Example background color */
+  color:  #ffffff; /* Example text color */
   border: none;
   border-radius: 5px;
   cursor: pointer;
