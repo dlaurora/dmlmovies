@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 
-function Header({ onContactClick }) { // Ensure `onContactClick` is received as a prop
+function Header({ onContactClick }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const closeMenu = (e) => {
-      if (!e.target.closest('.menu-dropdown') && !e.target.classList.contains('menu-button')) {
+      if (!e.target.closest('.menu-dropdown') && 
+          !e.target.closest('.hamburger-icon') &&
+          !e.target.classList.contains('menu-button')) {
         setIsMenuOpen(false);
       }
     };
@@ -23,9 +25,9 @@ function Header({ onContactClick }) { // Ensure `onContactClick` is received as 
 
   const handleContactClick = (e) => {
     e.preventDefault();
-    toggleMenu(); // This will close the menu when a link is clicked
+    toggleMenu();
     if(onContactClick) {
-      onContactClick(); // Call the passed `onContactClick` prop function
+      onContactClick();
     }
   };
 
